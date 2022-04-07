@@ -3,21 +3,19 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
-  const user = await prisma.user.create({
+  await prisma.user.create({
     data: {
-      name: 'Xiangyi',
+      name: 'Roger',
       email: 'childhood331@gmail.com',
     },
   });
 
-  const task = await prisma.task.create({
+  await prisma.task.create({
     data: {
       userId: 2,
       content: 'wake up Leo',
     },
   });
-
-  console.log(user);
 }
 
 main()
