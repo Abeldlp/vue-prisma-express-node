@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.app.json",
-  "exclude": [],
+  "include": ["src"],
+  "exclude": ["node_modules", "*.spec.ts"],
   "compilerOptions": {
     "composite": true,
     "lib": [],
